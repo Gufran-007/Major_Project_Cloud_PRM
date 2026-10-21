@@ -28,7 +28,8 @@
     "naive",
     "seasonal_naive",
     "ridge",
-    "hgb"
+    "hgb",
+    "arima"
   ],
   "residual_window":48,
   "margin_k":1.5,

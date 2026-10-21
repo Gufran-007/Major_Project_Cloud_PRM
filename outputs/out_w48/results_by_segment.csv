@@ -1,0 +1,11 @@
+segment,model,MAE,RMSE,under_rate_pct,sla_violation_pct,mean_utilisation_pct
+predictable,arima,2.0743,3.038,45.3093,8.4655,84.9727
+predictable,hgb,1.8776,2.5002,42.155,7.3102,85.7258
+predictable,naive,1.8168,2.5069,46.0174,9.2848,86.5596
+predictable,ridge,1.7564,2.3625,51.0639,9.5138,87.3601
+predictable,seasonal_naive,7.1943,8.9749,45.6866,23.7516,69.097
+volatile,arima,2.3617,3.8754,48.559,7.761,87.3805
+volatile,hgb,2.1095,3.1797,47.0663,7.299,88.1574
+volatile,naive,2.056,3.0922,50.2598,8.2652,88.5494
+volatile,ridge,1.9792,3.0032,51.2101,8.918,89.2737
+volatile,seasonal_naive,7.7993,9.9653,49.2883,21.7013,73.0202

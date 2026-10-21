@@ -3,36 +3,36 @@
 # described by this file plus the seed. Commit it next to your results.
 
 # ---- data -------------------------------------------------------------
-use_synthetic: true            # false = load real traces from data_dir
+use_synthetic: true # false = load real traces from data_dir
 data_dir: "data/bitbrains/fastStorage"
-n_machines: 12                 # raise this once you know it works
+n_machines: 12 # raise this once you know it works
 resample_rule: "5min"
-max_gap_intervals: 6           # gaps longer than 6 intervals (30 min) are excluded
+max_gap_intervals: 6 # gaps longer than 6 intervals (30 min) are excluded
 target: "cpu_usage_pct"
 
 # ---- features ---------------------------------------------------------
-lags: [0, 1, 2, 3, 6, 12, 24]   # 0 = the current interval
+lags: [0, 1, 2, 3, 6, 12, 24] # 0 = the current interval
 roll_windows: [6, 12, 48]
 use_calendar: true
 use_cross_resource: true
-horizon: 1                     # predict 1 interval (5 min) ahead
+horizon: 1 # predict 1 interval (5 min) ahead
 
 # ---- splitting --------------------------------------------------------
 train_frac: 0.60
-val_frac: 0.20                 # test = remaining 0.20
+val_frac: 0.20 # test = remaining 0.20
 
 # ---- models -----------------------------------------------------------
 # arima needs statsmodels, lstm needs torch; both are skipped if absent.
 models: ["naive", "seasonal_naive", "ridge", "hgb", "arima"]
 
 # ---- allocation -------------------------------------------------------
-residual_window: 48            # 4 hours at 5-minute sampling
+residual_window: 48 # 4 hours at 5-minute sampling
 margin_k: 1.5
-policy_model: "hgb"            # forecaster driving the predictive policy
-provisioning_delays: [0, 1, 3, 6]   # intervals between deciding and capacity going live
-cost_alpha: 1.0                # price of one unit of idle capacity
-cost_beta: 5.0                 # price of one SLA violation
-target_violation_pct: 5.0      # both policies calibrated to this SLA target on validation
+policy_model: "hgb" # forecaster driving the predictive policy
+provisioning_delays: [0, 1, 3, 6] # intervals between deciding and capacity going live
+cost_alpha: 1.0 # price of one unit of idle capacity
+cost_beta: 5.0 # price of one SLA violation
+target_violation_pct: 5.0 # both policies calibrated to this SLA target on validation
 
 # ---- bookkeeping ------------------------------------------------------
 seed: 42

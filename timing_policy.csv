@@ -1,0 +1,3 @@
+component,training_s,inference_ms,n_intervals
+Allocation policy (per decision),,0.0828,791
+Full replay of one machine,,68.1,791
