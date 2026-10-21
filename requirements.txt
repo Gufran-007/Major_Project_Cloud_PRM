@@ -1,0 +1,11 @@
+# Core - required. Everything runs with just these.
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+PyYAML>=6.0
+matplotlib>=3.7
+
+# Optional - each unlocks extra models, and the code skips them cleanly if absent.
+# statsmodels>=0.14      # ARIMA, Holt-Winters
+# lightgbm>=4.0          # faster gradient boosting than the sklearn default
+# torch>=2.0             # LSTM / GRU sequence models
